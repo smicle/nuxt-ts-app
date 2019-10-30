@@ -7,7 +7,9 @@ export type RootState = root.State
 const createStore = () => {
   return new Vuex.Store({
     state: root.state(),
-    modules: {},
+    modules: {
+      [todos.name]: todos,
+    },
   })
 }
 
